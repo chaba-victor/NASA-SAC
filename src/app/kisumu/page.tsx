@@ -3,9 +3,33 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import MapContainer from '@/components/MapContainer';
+import dynamic from 'next/dynamic';
+
+const MapContainer = dynamic(() => import('@/components/MapContainer'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full rounded-lg bg-gray-100 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-nasa-blue mx-auto"></div>
+        <p className="text-sm text-gray-600 mt-2">Loading map...</p>
+      </div>
+    </div>
+  )
+});
+
+const ChartPanel = dynamic(() => import('@/components/ChartPanel'), {
+  ssr: false,
+  loading: () => (
+    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+      <div className="text-center text-gray-500">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-nasa-blue mx-auto mb-4"></div>
+        <p>Loading chart...</p>
+      </div>
+    </div>
+  )
+});
+
 import TimeSlider from '@/components/TimeSlider';
-import ChartPanel from '@/components/ChartPanel';
 import TerraInstruments from '@/components/TerraInstruments';
 import DataLayersOverlay from '@/components/DataLayersOverlay';
 import { Region, TimeDataPoint, Annotation } from '@/lib/types';

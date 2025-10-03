@@ -7,7 +7,7 @@ interface TimeSliderProps {
   startYear: number;
   endYear: number;
   currentYear: number;
-  onYearChange: (year: number) => void;
+  onYearChange: (year: number | ((prevYear: number) => number)) => void;
   isPlaying: boolean;
   onPlayPause: (playing: boolean) => void;
   onSpeedChange: (speed: number) => void;

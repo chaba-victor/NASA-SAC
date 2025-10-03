@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lake-victoria-mvp.vercel.app'),
   title: 'Lake Victoria MVP - Terra Satellite Data Visualization',
   description: 'Explore 25 years of environmental change in Lake Victoria using NASA Terra satellite data. Interactive visualization of NDVI and LST trends in Kisumu, Kenya.',
   keywords: ['NASA', 'Terra', 'satellite', 'Lake Victoria', 'Kisumu', 'NDVI', 'LST', 'environmental change', 'earth observation', 'climate data'],
   authors: [{ name: 'NASA SAC Team' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   icons: {
     icon: '/favicon.svg',
@@ -42,6 +42,11 @@ export const metadata: Metadata = {
     'theme-color': '#0B3D91',
     'msapplication-TileColor': '#0B3D91',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ import regionsData from '@/config/regions.json';
  * Features region selection and project introduction
  */
 export default function HomePage() {
-  const regions: Region[] = regionsData;
+  const regions: Region[] = regionsData as Region[];
 
   return (
     <div className="min-h-screen">
@@ -55,7 +55,7 @@ export default function HomePage() {
               Earth Observation
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Explore the changing face of Lake Victoria using NASA's Terra satellite data. 
+              Explore the changing face of Lake Victoria using NASA&apos;s Terra satellite data. 
               Discover environmental trends, community impacts, and scientific insights from 2000-2025.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -78,8 +78,8 @@ export default function HomePage() {
               About Terra Satellite
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              NASA's Terra satellite has been observing Earth for over 25 years, providing 
-              invaluable data about our planet's changing environment.
+              NASA&apos;s Terra satellite has been observing Earth for over 25 years, providing 
+              invaluable data about our planet&apos;s changing environment.
             </p>
           </div>
 

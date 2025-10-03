@@ -13,20 +13,21 @@
     "clean": "rm -rf .next out node_modules/.cache"
   },
   "dependencies": {
+    "deck.gl": "^8.9.0",
+    "mapbox-gl": "^2.15.0",
     "next": "14.0.0",
+    "plotly.js": "^2.27.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "mapbox-gl": "^2.15.0",
-    "deck.gl": "^8.9.0",
-    "plotly.js": "^2.27.0",
     "react-plotly.js": "^2.6.0"
   },
   "devDependencies": {
+    "@types/mapbox-gl": "^2.7.0",
     "@types/node": "^20.0.0",
+    "@types/plotly.js": "^2.12.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "@types/mapbox-gl": "^2.7.0",
-    "@types/plotly.js": "^2.12.0",
+    "@types/react-plotly.js": "^2.6.3",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "14.0.0",
