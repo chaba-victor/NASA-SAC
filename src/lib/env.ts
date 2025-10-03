@@ -38,3 +38,4 @@ export const validateEnvironment = () => {
   return errors.length === 0;
 };
 
+
